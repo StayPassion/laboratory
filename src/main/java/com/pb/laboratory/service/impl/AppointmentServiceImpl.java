@@ -12,40 +12,40 @@ import java.util.List;
 
 
 /**
-* TODO description
-*
-* @author fukua
-* @date 2021/05/01
-* @since 1.0
-*/
+ * TODO description
+ *
+ * @author fukua
+ * @date 2021/05/01
+ * @since 1.0
+ */
 @Service
-public class AppointmentServiceImpl  implements AppointmentService {
-@Resource
-private AppointmentMapper appointmentMapper;
+public class AppointmentServiceImpl implements AppointmentService {
+    @Resource
+    private AppointmentMapper appointmentMapper;
 
 
-@Override
-public AppointmentRespDTO save(AppointmentReqDTO reqDTO) {
+    @Override
+    public AppointmentRespDTO save(AppointmentReqDTO reqDTO) {
 //TODO 请实现具体的业务逻辑
-return null;
-}
+        return null;
+    }
 
 
-@Override
-public void deleteById(Integer id) {
+    @Override
+    public void deleteById(Integer id) {
 //TODO 请实现具体的业务逻辑
-}
+    }
 
-@Override
-public AppointmentRespDTO update(AppointmentReqDTO updateDTO) {
+    @Override
+    public AppointmentRespDTO update(AppointmentReqDTO updateDTO) {
 //TODO 请实现具体的业务逻辑
-return null;
-}
+        return null;
+    }
 
-@Override
-public AppointmentRespDTO findById(Integer id) {
+    @Override
+    public AppointmentRespDTO findById(Integer id) {
 //TODO 请实现具体的业务逻辑
-return null;
-}
+        return null;
+    }
 
 }

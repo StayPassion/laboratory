@@ -12,40 +12,40 @@ import java.util.List;
 
 
 /**
-* TODO description
-*
-* @author fukua
-* @date 2021/05/01
-* @since 1.0
-*/
+ * TODO description
+ *
+ * @author fukua
+ * @date 2021/05/01
+ * @since 1.0
+ */
 @Service
-public class LaboratoryInfoServiceImpl  implements LaboratoryInfoService {
-@Resource
-private LaboratoryInfoMapper laboratoryInfoMapper;
+public class LaboratoryInfoServiceImpl implements LaboratoryInfoService {
+    @Resource
+    private LaboratoryInfoMapper laboratoryInfoMapper;
 
 
-@Override
-public LaboratoryInfoRespDTO save(LaboratoryInfoReqDTO reqDTO) {
+    @Override
+    public LaboratoryInfoRespDTO save(LaboratoryInfoReqDTO reqDTO) {
 //TODO 请实现具体的业务逻辑
-return null;
-}
+        return null;
+    }
 
 
-@Override
-public void deleteById(Integer id) {
+    @Override
+    public void deleteById(Integer id) {
 //TODO 请实现具体的业务逻辑
-}
+    }
 
-@Override
-public LaboratoryInfoRespDTO update(LaboratoryInfoReqDTO updateDTO) {
+    @Override
+    public LaboratoryInfoRespDTO update(LaboratoryInfoReqDTO updateDTO) {
 //TODO 请实现具体的业务逻辑
-return null;
-}
+        return null;
+    }
 
-@Override
-public LaboratoryInfoRespDTO findById(Integer id) {
+    @Override
+    public LaboratoryInfoRespDTO findById(Integer id) {
 //TODO 请实现具体的业务逻辑
-return null;
-}
+        return null;
+    }
 
 }

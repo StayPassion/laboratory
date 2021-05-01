@@ -9,36 +9,36 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
-* TODO description
-*
-* @author fukua
-* @date 2021/05/01
-* @since 1.0
-*/
+ * TODO description
+ *
+ * @author fukua
+ * @date 2021/05/01
+ * @since 1.0
+ */
 @RestController
 @RequestMapping("/class/info")
 public class ClassInfoController {
-@Resource
-private ClassInfoService classInfoService;
+    @Resource
+    private ClassInfoService classInfoService;
 
-@PostMapping
-public ClassInfoRespDTO add(@RequestBody ClassInfoReqDTO classInfoReqDTO) {
-return classInfoService.save(classInfoReqDTO);
-}
+    @PostMapping
+    public ClassInfoRespDTO add(@RequestBody ClassInfoReqDTO classInfoReqDTO) {
+        return classInfoService.save(classInfoReqDTO);
+    }
 
-@DeleteMapping("/{id}")
-public void delete(@PathVariable Integer id) {
-classInfoService.deleteById(id);
-}
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Integer id) {
+        classInfoService.deleteById(id);
+    }
 
-@PutMapping
-public ClassInfoRespDTO  update(@RequestBody ClassInfoReqDTO classInfoReqDTO) {
-return classInfoService.update(classInfoReqDTO);
-}
+    @PutMapping
+    public ClassInfoRespDTO update(@RequestBody ClassInfoReqDTO classInfoReqDTO) {
+        return classInfoService.update(classInfoReqDTO);
+    }
 
-@GetMapping("/{id}")
-public ClassInfoRespDTO detail(@PathVariable Integer id) {
-return classInfoService.findById(id);
-}
+    @GetMapping("/{id}")
+    public ClassInfoRespDTO detail(@PathVariable Integer id) {
+        return classInfoService.findById(id);
+    }
 
 }

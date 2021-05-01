@@ -9,36 +9,41 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
-* TODO description
-*
-* @author fukua
-* @date 2021/05/01
-* @since 1.0
-*/
+ * TODO description
+ *
+ * @author fukua
+ * @date 2021/05/01
+ * @since 1.0
+ */
 @RestController
 @RequestMapping("/course")
 public class CourseController {
-@Resource
-private CourseService courseService;
+    @Resource
+    private CourseService courseService;
 
-@PostMapping
-public CourseRespDTO add(@RequestBody CourseReqDTO courseReqDTO) {
-return courseService.save(courseReqDTO);
-}
+    @PostMapping
+    public CourseRespDTO add(@RequestBody CourseReqDTO courseReqDTO) {
+        return courseService.save(courseReqDTO);
+    }
 
-@DeleteMapping("/{id}")
-public void delete(@PathVariable Integer id) {
-courseService.deleteById(id);
-}
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Integer id) {
+        courseService.deleteById(id);
+    }
 
-@PutMapping
-public CourseRespDTO  update(@RequestBody CourseReqDTO courseReqDTO) {
-return courseService.update(courseReqDTO);
-}
+    @PutMapping
+    public CourseRespDTO update(@RequestBody CourseReqDTO courseReqDTO) {
+        return courseService.update(courseReqDTO);
+    }
 
-@GetMapping("/{id}")
-public CourseRespDTO detail(@PathVariable Integer id) {
-return courseService.findById(id);
-}
+    @GetMapping("/{id}")
+    public CourseRespDTO detail(@PathVariable Integer id) {
+        return courseService.findById(id);
+    }
+
+    @GetMapping
+    public List<CourseRespDTO> findAll() {
+        return courseService.findAll();
+    }
 
 }

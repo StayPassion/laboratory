@@ -12,40 +12,40 @@ import java.util.List;
 
 
 /**
-* TODO description
-*
-* @author fukua
-* @date 2021/05/01
-* @since 1.0
-*/
+ * TODO description
+ *
+ * @author fukua
+ * @date 2021/05/01
+ * @since 1.0
+ */
 @Service
-public class ClassInfoServiceImpl  implements ClassInfoService {
-@Resource
-private ClassInfoMapper classInfoMapper;
+public class ClassInfoServiceImpl implements ClassInfoService {
+    @Resource
+    private ClassInfoMapper classInfoMapper;
 
 
-@Override
-public ClassInfoRespDTO save(ClassInfoReqDTO reqDTO) {
+    @Override
+    public ClassInfoRespDTO save(ClassInfoReqDTO reqDTO) {
 //TODO 请实现具体的业务逻辑
-return null;
-}
+        return null;
+    }
 
 
-@Override
-public void deleteById(Integer id) {
+    @Override
+    public void deleteById(Integer id) {
 //TODO 请实现具体的业务逻辑
-}
+    }
 
-@Override
-public ClassInfoRespDTO update(ClassInfoReqDTO updateDTO) {
+    @Override
+    public ClassInfoRespDTO update(ClassInfoReqDTO updateDTO) {
 //TODO 请实现具体的业务逻辑
-return null;
-}
+        return null;
+    }
 
-@Override
-public ClassInfoRespDTO findById(Integer id) {
+    @Override
+    public ClassInfoRespDTO findById(Integer id) {
 //TODO 请实现具体的业务逻辑
-return null;
-}
+        return null;
+    }
 
 }

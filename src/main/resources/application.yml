@@ -1,7 +1,7 @@
 server:
   port: 1234
   servlet:
-    context-path:
+    context-path: /laboratory
 spring:
   application:
     name: uss-dms-service
@@ -47,3 +47,6 @@ spring:
 
 logging:
   config: classpath:logback-spring.xml
+  level:
+    root:
+    com.pb.laboratory.dao.mapper: trace
