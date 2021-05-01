@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pb.laboratory.dao.mapper.CourseMapper">
+  <resultMap id="BaseResultMap" type="com.pb.laboratory.domain.po.Course">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="course_name" jdbcType="VARCHAR" property="courseName" />
+    <result column="course_time" jdbcType="VARCHAR" property="courseTime" />
+    <result column="desc" jdbcType="VARCHAR" property="desc" />
+  </resultMap>
+</mapper>
