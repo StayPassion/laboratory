@@ -7,6 +7,7 @@ import javax.persistence.*;
 @Table(name = "laboratory_info")
 @Data
 public class LaboratoryInfo {
+    @Id
     private Integer id;
 
     @Column(name = "laboratory_name")

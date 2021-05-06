@@ -7,6 +7,7 @@ import javax.persistence.*;
 
 @Data
 public class Appointment {
+    @Id
     private Long id;
 
     @Column(name = "teacher_name")

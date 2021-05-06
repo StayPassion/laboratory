@@ -3,6 +3,7 @@ package com.pb.laboratory.controller;
 import com.pb.laboratory.domain.dto.request.AppointmentReqDTO;
 import com.pb.laboratory.domain.dto.response.AppointmentRespDTO;
 import com.pb.laboratory.service.AppointmentService;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -22,8 +23,15 @@ public class AppointmentController {
     private AppointmentService appointmentService;
 
     @PostMapping
-    public AppointmentRespDTO add(@RequestBody AppointmentReqDTO appointmentReqDTO) {
-        return appointmentService.save(appointmentReqDTO);
+    public void add(@Validated @RequestBody AppointmentReqDTO appointmentReqDTO) {
+        appointmentService.save(appointmentReqDTO);
+    }
+
+    @GetMapping
+    public List<AppointmentRespDTO> detail(@RequestParam(required = false, value = "date") String date,
+                                           @RequestParam(required = false, value = "course_id") Integer courseId,
+                                           @RequestParam(required = false, value = "laboratory_id") Integer laboratoryId) {
+        return appointmentService.select(date, courseId, laboratoryId);
     }
 
     @DeleteMapping("/{id}")

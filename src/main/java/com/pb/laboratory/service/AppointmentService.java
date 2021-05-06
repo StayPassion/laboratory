@@ -21,7 +21,7 @@ public interface AppointmentService {
      * @param reqDTO
      * @return
      */
-    AppointmentRespDTO save(AppointmentReqDTO reqDTO);
+    void save(AppointmentReqDTO reqDTO);
 
 
     /**
@@ -48,5 +48,5 @@ public interface AppointmentService {
      */
     AppointmentRespDTO findById(Integer id);
 
-
+    List<AppointmentRespDTO> select(String date, Integer courseId,Integer laboratoryId);
 }

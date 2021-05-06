@@ -6,6 +6,8 @@ import javax.persistence.*;
 
 @Data
 public class Course {
+
+    @Id
     private Integer id;
 
     @Column(name = "course_name")

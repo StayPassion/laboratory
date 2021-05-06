@@ -1,14 +1,14 @@
 package com.pb.laboratory.service.impl;
 
+import com.pb.laboratory.dao.mapper.LaboratoryInfoMapper;
 import com.pb.laboratory.domain.dto.request.LaboratoryInfoReqDTO;
 import com.pb.laboratory.domain.dto.response.LaboratoryInfoRespDTO;
-import com.pb.laboratory.dao.mapper.LaboratoryInfoMapper;
+import com.pb.laboratory.domain.po.LaboratoryInfo;
 import com.pb.laboratory.service.LaboratoryInfoService;
-
+import com.pb.laboratory.uitls.BeanCopyUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 
 /**
@@ -44,8 +44,7 @@ public class LaboratoryInfoServiceImpl implements LaboratoryInfoService {
 
     @Override
     public LaboratoryInfoRespDTO findById(Integer id) {
-//TODO 请实现具体的业务逻辑
-        return null;
+        LaboratoryInfo laboratoryInfo = laboratoryInfoMapper.selectByPrimaryKey(id);
+        return BeanCopyUtils.convert(laboratoryInfo, LaboratoryInfoRespDTO.class);
     }
-
 }
